@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About SiamBuild Pro — the team behind construction and renovation in Phuket, Thailand.">
+  <title>About Us — SiamBuild Pro</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .value-card {
+      padding: 32px 28px;
+      background: var(--gray-50);
+      border-radius: var(--radius);
+    }
+    .value-icon { font-size: 28px; margin-bottom: 16px; }
+    .value-card h3 { margin-bottom: 8px; font-size: 1rem; }
+    .value-card p { font-size: 14px; }
+    .story-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .story-photo {
+      border-radius: var(--radius);
+      overflow: hidden;
+      height: 440px;
+      background: var(--gray-100);
+    }
+    .story-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .story-text p { margin-bottom: 16px; }
+    @media (max-width: 900px) {
+      .story-inner { grid-template-columns: 1fr; }
+      .story-photo { height: 280px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">Siam<span>Build</span> Pro</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="nav-cta">Get a quote</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<main>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label">Who we are</span>
+      <h1>About SiamBuild Pro</h1>
+      <p>A small team with big standards — bringing European engineering discipline to construction in Phuket.</p>
+    </div>
+  </div>
+
+  <!-- OUR STORY -->
+  <section>
+    <div class="container">
+      <div class="story-inner">
+        <div class="story-photo">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Construction team at work">
+        </div>
+        <div class="story-text">
+          <span class="section-label">Our story</span>
+          <h2 style="margin-bottom:24px;">Built on trust, delivered with precision</h2>
+          <p>SiamBuild Pro was founded by a certified engineer with over 5 years of experience in construction and project management. After spending years working on large-scale projects, we saw a gap in the Phuket market: clients who wanted quality they could trust, transparent pricing, and someone who actually spoke their language.</p>
+          <p>We combine deep local knowledge with engineering discipline that most local contractors simply don't offer. Every project is personally overseen by our lead engineer — we don't hand you off to a subcontractor and disappear.</p>
+          <p>Whether you're building your dream villa or renovating a condo as an investment property, we treat your project with the same seriousness we'd want for our own homes.</p>
+          <p style="color:var(--accent); font-weight:500;">Говорим по-русски — for our Russian-speaking clients, we handle everything in your language.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="how-bg">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">What drives us</span>
+        <h2>Our values</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">🎯</div>
+          <h3>Honesty first</h3>
+          <p>We tell you what's possible, what it costs, and how long it takes — before we start, not after.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">⚙️</div>
+          <h3>Engineering mindset</h3>
+          <p>Every decision is based on technical reasoning. We don't cut corners because we understand why they matter.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">📱</div>
+          <h3>Full transparency</h3>
+          <p>Weekly photo and video updates. You always know exactly where your project stands.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🤝</div>
+          <h3>Long-term relationships</h3>
+          <p>We're not here for one job. We want to be the team you call for every project — and recommend to everyone you know.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section>
+    <div class="container">
+      <span class="section-label">The team</span>
+      <h2>Who you'll work with</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="Lead Engineer">
+          </div>
+          <h3>Alexey</h3>
+          <p style="color:var(--accent); font-size:13px; font-weight:500; margin-bottom:6px;">Lead Engineer & Co-founder</p>
+          <p>Certified structural engineer, 5+ years in construction management. Based between Russia and Thailand — handles design, oversight, and client communication.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80" alt="Site Manager">
+          </div>
+          <h3>Mikhail</h3>
+          <p style="color:var(--accent); font-size:13px; font-weight:500; margin-bottom:6px;">Site Manager & Co-founder</p>
+          <p>On the ground in Phuket full-time. Coordinates the crew, manages daily operations, and ensures every build meets our standards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Want to work with us?</h2>
+      <p>Reach out — tell us about your project and let's see if we're the right fit.</p>
+      <div class="flex-gap" style="justify-content:center;">
+        <a href="contact.html" class="btn btn-primary">Get in touch →</a>
+        <a href="https://wa.me/66000000000" class="btn btn-outline" target="_blank">WhatsApp us</a>
+      </div>
+      <p class="cta-note">Говорим по-русски &nbsp;·&nbsp; Reply within 24h</p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">Siam<span>Build</span> Pro</div>
+        <p class="footer-about">Construction and renovation in Phuket, Thailand. European engineering standards, fixed-price contracts.</p>
+        <p style="font-size:13px; color:rgba(255,255,255,0.4); margin-top:12px;">Говорим по-русски</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://wa.me/66000000000">WhatsApp</a></li>
+          <li><a href="mailto:hello@siambuildpro.com">hello@siambuildpro.com</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><span style="color:rgba(255,255,255,0.4);">Phuket, Thailand</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 SiamBuild Pro. All rights reserved.</span>
+      <span>Built right. Built to last.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
+
+</body>
+</html>

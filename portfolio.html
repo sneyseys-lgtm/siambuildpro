@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SiamBuild Pro portfolio — construction and renovation projects in Phuket, Thailand.">
+  <title>Portfolio — SiamBuild Pro</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .filter-btn {
+      padding: 8px 18px;
+      border-radius: 100px;
+      border: 1px solid var(--gray-200);
+      background: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: var(--gray-600);
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--black);
+      color: var(--white);
+      border-color: var(--black);
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .portfolio-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      transition: all 0.2s;
+    }
+    .portfolio-card:hover { box-shadow: var(--shadow); transform: translateY(-4px); }
+    .portfolio-img {
+      height: 220px;
+      overflow: hidden;
+      background: var(--gray-100);
+      position: relative;
+    }
+    .portfolio-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .portfolio-card:hover .portfolio-img img { transform: scale(1.05); }
+    .portfolio-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .portfolio-card:hover .portfolio-overlay { opacity: 1; }
+    .portfolio-overlay span {
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid rgba(255,255,255,0.6);
+      padding: 8px 18px;
+      border-radius: 100px;
+    }
+    .portfolio-body { padding: 20px 24px; }
+    .portfolio-body h3 { font-size: 1rem; margin-bottom: 6px; }
+    .portfolio-body p { font-size: 13px; }
+    .portfolio-meta {
+      display: flex;
+      gap: 16px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--gray-100);
+    }
+    .meta-item { font-size: 12px; color: var(--gray-400); }
+    .meta-item strong { color: var(--gray-800); font-weight: 500; display: block; font-size: 13px; }
+    .coming-soon {
+      text-align: center;
+      padding: 80px 24px;
+      background: var(--gray-50);
+      border-radius: var(--radius);
+      border: 2px dashed var(--gray-200);
+      margin-top: 24px;
+    }
+    .coming-soon h3 { margin-bottom: 12px; }
+    .coming-soon p { max-width: 400px; margin: 0 auto 24px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">Siam<span>Build</span> Pro</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="nav-cta">Get a quote</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<main>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label">Our work</span>
+      <h1>Portfolio</h1>
+      <p>Every project we take on is approached with the same attention to detail — from a single room to a complete villa build.</p>
+      <div class="filter-bar">
+        <button class="filter-btn active">All projects</button>
+        <button class="filter-btn">New construction</button>
+        <button class="filter-btn">Renovation</button>
+        <button class="filter-btn">Pools & outdoor</button>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="3-bedroom villa Rawai">
+            <div class="portfolio-overlay"><span>View project</span></div>
+          </div>
+          <div class="portfolio-body">
+            <span class="card-tag">New construction</span>
+            <h3>3-bedroom villa, Rawai</h3>
+            <p>Turnkey build including pool, terrace, and landscaped garden. Delivered on schedule.</p>
+            <div class="portfolio-meta">
+              <div class="meta-item"><strong>180 m²</strong>Area</div>
+              <div class="meta-item"><strong>6 months</strong>Timeline</div>
+              <div class="meta-item"><strong>Rawai</strong>Location</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Condo renovation Patong">
+            <div class="portfolio-overlay"><span>View project</span></div>
+          </div>
+          <div class="portfolio-body">
+            <span class="card-tag">Renovation</span>
+            <h3>Full condo renovation, Patong</h3>
+            <p>Complete gut renovation of a 65 m² condo — new layout, kitchen, bathrooms and finishes.</p>
+            <div class="portfolio-meta">
+              <div class="meta-item"><strong>65 m²</strong>Area</div>
+              <div class="meta-item"><strong>10 weeks</strong>Timeline</div>
+              <div class="meta-item"><strong>Patong</strong>Location</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=800&q=80" alt="Pool and terrace Chalong">
+            <div class="portfolio-overlay"><span>View project</span></div>
+          </div>
+          <div class="portfolio-body">
+            <span class="card-tag">Pools & outdoor</span>
+            <h3>Infinity pool & terrace, Chalong</h3>
+            <p>12m infinity pool with sun deck, outdoor kitchen, and tropical garden landscaping.</p>
+            <div class="portfolio-meta">
+              <div class="meta-item"><strong>12 m</strong>Pool length</div>
+              <div class="meta-item"><strong>8 weeks</strong>Timeline</div>
+              <div class="meta-item"><strong>Chalong</strong>Location</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="coming-soon">
+        <h3>More projects coming soon</h3>
+        <p>We're currently working on new builds and renovations across Phuket. Check back for updates — or follow us on Instagram for real-time progress.</p>
+        <div class="flex-gap" style="justify-content:center;">
+          <a href="https://instagram.com/siambuildpro" class="btn btn-outline btn-sm" target="_blank">Follow on Instagram →</a>
+          <a href="contact.html" class="btn btn-primary btn-sm">Start your project →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Your project could be next</h2>
+      <p>Tell us what you're planning — we'll give you an honest assessment and free quote.</p>
+      <div class="flex-gap" style="justify-content:center;">
+        <a href="contact.html" class="btn btn-primary">Get a free quote →</a>
+        <a href="https://wa.me/66000000000" class="btn btn-outline" target="_blank">WhatsApp us</a>
+      </div>
+      <p class="cta-note">Говорим по-русски &nbsp;·&nbsp; Reply within 24h</p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">Siam<span>Build</span> Pro</div>
+        <p class="footer-about">Construction and renovation in Phuket, Thailand. European engineering standards, fixed-price contracts.</p>
+        <p style="font-size:13px; color:rgba(255,255,255,0.4); margin-top:12px;">Говорим по-русски</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://wa.me/66000000000">WhatsApp</a></li>
+          <li><a href="mailto:hello@siambuildpro.com">hello@siambuildpro.com</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><span style="color:rgba(255,255,255,0.4);">Phuket, Thailand</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 SiamBuild Pro. All rights reserved.</span>
+      <span>Built right. Built to last.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
