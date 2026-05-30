@@ -1,11 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SiamBuild Pro — construction and renovation in Phuket, Thailand. European engineering standards, fixed-price contracts, turnkey homes and commercial spaces.">
-  <title>SiamBuild Pro — Construction & Renovation in Phuket</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Блог SiamBuild Pro — советы по строительству и ремонту на Пхукете, Таиланд.">
+  <title>Блог — SiamBuild Pro</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .blog-featured { display:grid; grid-template-columns:1.5fr 1fr; gap:32px; margin-top:48px; }
+    .blog-featured-card { border-radius:var(--radius); overflow:hidden; border:1px solid var(--gray-200); transition:all 0.2s; cursor:pointer; }
+    .blog-featured-card:hover { box-shadow:var(--shadow); transform:translateY(-3px); }
+    .blog-featured-img { height:280px; overflow:hidden; background:var(--gray-100); }
+    .blog-featured-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s; }
+    .blog-featured-card:hover .blog-featured-img img { transform:scale(1.04); }
+    .blog-featured-body { padding:28px 32px; }
+    .blog-featured-body h2 { font-size:1.4rem; margin-bottom:10px; }
+    .blog-featured-body p { font-size:15px; }
+    .blog-meta { font-size:12px; color:var(--gray-400); margin-top:16px; }
+    .blog-side { display:flex; flex-direction:column; gap:16px; }
+    .blog-side-card { display:flex; gap:16px; padding:16px; border:1px solid var(--gray-200); border-radius:var(--radius-sm); cursor:pointer; transition:all 0.2s; }
+    .blog-side-card:hover { box-shadow:var(--shadow); transform:translateY(-2px); }
+    .blog-side-img { width:80px; height:80px; border-radius:var(--radius-sm); overflow:hidden; flex-shrink:0; background:var(--gray-100); }
+    .blog-side-img img { width:100%; height:100%; object-fit:cover; }
+    .blog-side-card h3 { font-size:14px; font-family:'DM Sans',sans-serif; font-weight:500; margin-bottom:4px; line-height:1.4; }
+    .blog-side-card p { font-size:12px; }
+    @media (max-width:900px) { .blog-featured { grid-template-columns:1fr; } }
+  </style>
 </head>
 <body>
 
@@ -13,181 +33,134 @@
   <div class="container nav-inner">
     <a href="index.html" class="nav-logo">Siam<span>Build</span> Pro</a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="services.html">Services</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="contact.html" class="nav-cta">Get a quote</a></li>
+      <li><a href="services.html">Услуги</a></li>
+      <li><a href="portfolio.html">Портфолио</a></li>
+      <li><a href="about.html">О нас</a></li>
+      <li><a href="blog.html">Блог</a></li>
+      <li><a href="contact.html" class="nav-cta">Получить расчёт</a></li>
     </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div style="display:flex;align-items:center;gap:8px;">
+      <div class="lang-switch"><a href="../blog.html">EN</a><a href="blog.html" class="active">RU</a></div>
+      <button class="nav-toggle" id="navToggle" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </nav>
 
 <main>
 
-  <!-- HERO -->
-  <section class="hero">
+  <div class="page-hero">
     <div class="container">
-      <div class="hero-inner">
-        <div>
-          <span class="section-label">Phuket, Thailand</span>
-          <h1 class="hero-title">Build your dream home in Thailand</h1>
-          <p class="hero-sub">Construction and renovation for private villas and commercial spaces — from foundation to finishing. European engineering, local expertise.</p>
-          <div class="hero-btns">
-            <a href="contact.html" class="btn btn-primary">Get a free quote →</a>
-            <a href="portfolio.html" class="btn btn-outline">See our work</a>
-          </div>
-          <div class="hero-trust">
-            <div class="trust-item">
-              <span class="trust-num">5+</span>
-              <span class="trust-label">Years experience</span>
-            </div>
-            <div class="trust-item">
-              <span class="trust-num">Fixed</span>
-              <span class="trust-label">Price guarantee</span>
-            </div>
-            <div class="trust-item">
-              <span class="trust-num">2 yr</span>
-              <span class="trust-label">Warranty</span>
-            </div>
-            <div class="trust-item">
-              <span class="trust-num">EN / RU</span>
-              <span class="trust-label">We speak both</span>
-            </div>
-          </div>
-        </div>
-        <div class="hero-photos">
-          <div class="hero-photo-main">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Tropical villa with pool in Phuket">
-          </div>
-          <div class="hero-photo-sm">
-            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&q=80" alt="Modern home exterior">
-          </div>
-          <div class="hero-photo-sm">
-            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Interior finishing detail">
-          </div>
-        </div>
-      </div>
+      <span class="section-label">Полезно знать</span>
+      <h1>Блог</h1>
+      <p>Честные советы о строительстве и ремонте в Таиланде — цены, сроки, материалы и то, о чём обычно молчат.</p>
     </div>
-  </section>
+  </div>
 
-  <!-- SERVICES -->
   <section>
     <div class="container">
-      <span class="section-label">What we do</span>
-      <h2>Every type of project, done right</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🏗️</div>
-          <h3>New construction</h3>
-          <p>Villas, houses, and small commercial buildings — fully turnkey from design to handover.</p>
-          <a href="services.html" class="service-link">Learn more →</a>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🔨</div>
-          <h3>Renovation</h3>
-          <p>Full or partial renovation of homes, condos, and commercial spaces to any standard.</p>
-          <a href="services.html" class="service-link">Learn more →</a>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🏊</div>
-          <h3>Pools & outdoor</h3>
-          <p>Swimming pools, terraces, gardens and outdoor living spaces — built for the tropics.</p>
-          <a href="services.html" class="service-link">Learn more →</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- WHY US -->
-  <section>
-    <div class="container">
-      <div class="why-inner">
-        <div class="why-photo">
-          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Quality construction detail">
+      <div class="blog-featured">
+        <div class="blog-featured-card">
+          <div class="blog-featured-img">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Сколько стоит построить дом на Пхукете">
+          </div>
+          <div class="blog-featured-body">
+            <span class="card-tag">Бюджет и цены</span>
+            <h2>Сколько стоит построить дом на Пхукете в 2025 году?</h2>
+            <p>Реальная разбивка затрат на строительство на Пхукете — земля, материалы, работа, разрешения и скрытые расходы, о которых никто не предупреждает заранее.</p>
+            <p class="blog-meta">Май 2025 &nbsp;·&nbsp; 8 мин. чтения</p>
+          </div>
         </div>
-        <div>
-          <span class="section-label">Why SiamBuild Pro</span>
-          <h2 style="margin-bottom: 32px;">European standards in Thailand</h2>
-          <div class="why-list">
-            <div class="why-item">
-              <div class="why-num">01</div>
-              <div>
-                <h3>Engineer-led projects</h3>
-                <p>A certified engineer oversees every build — real technical expertise, not just a foreman.</p>
-              </div>
+
+        <div class="blog-side">
+          <div class="blog-side-card">
+            <div class="blog-side-img">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=200&q=80" alt="5 ошибок">
             </div>
-            <div class="why-item">
-              <div class="why-num">02</div>
-              <div>
-                <h3>Fixed-price contracts</h3>
-                <p>The price we agree is the price you pay. No surprises, no hidden extras.</p>
-              </div>
+            <div>
+              <span class="card-tag" style="font-size:10px; padding:2px 8px;">Ошибки</span>
+              <h3>5 дорогостоящих ошибок иностранцев при ремонте в Таиланде</h3>
+              <p class="blog-meta">Апрель 2025 &nbsp;·&nbsp; 6 мин.</p>
             </div>
-            <div class="why-item">
-              <div class="why-num">03</div>
-              <div>
-                <h3>Build remotely</h3>
-                <p>Weekly photo and video updates straight to your phone. You're always in the loop.</p>
-              </div>
+          </div>
+
+          <div class="blog-side-card">
+            <div class="blog-side-img">
+              <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=200&q=80" alt="Материалы">
             </div>
-            <div class="why-item">
-              <div class="why-num">04</div>
-              <div>
-                <h3>We speak your language</h3>
-                <p>English and Russian — no miscommunication, no middlemen lost in translation.</p>
-              </div>
+            <div>
+              <span class="card-tag" style="font-size:10px; padding:2px 8px;">Материалы</span>
+              <h3>Какие материалы лучше работают в тайском климате — и чего избегать</h3>
+              <p class="blog-meta">Март 2025 &nbsp;·&nbsp; 5 мин.</p>
+            </div>
+          </div>
+
+          <div class="blog-side-card">
+            <div class="blog-side-img">
+              <img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=200&q=80" alt="Бассейн">
+            </div>
+            <div>
+              <span class="card-tag" style="font-size:10px; padding:2px 8px;">Бассейны</span>
+              <h3>Сколько времени занимает строительство бассейна на Пхукете — реальные сроки</h3>
+              <p class="blog-meta">Февраль 2025 &nbsp;·&nbsp; 4 мин.</p>
             </div>
           </div>
         </div>
       </div>
+
+      <hr class="divider">
+
+      <span class="section-label">Все статьи</span>
+      <div class="blog-grid">
+        <div class="card">
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Разрешения в Таиланде">
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Документы и разрешения</span>
+            <h3>Разрешения на строительство в Таиланде — что реально нужно и как получить</h3>
+            <p>Практическое руководство по тайским строительным нормам для иностранцев.</p>
+            <p class="blog-meta" style="margin-top:12px;">Январь 2025 &nbsp;·&nbsp; 7 мин. чтения</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Поиск подрядчика">
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Выбор подрядчика</span>
+            <h3>Как найти надёжного подрядчика на Пхукете — и красные флаги, которые вас спасут</h3>
+            <p>Какие вопросы задавать, на каких договорах настаивать и какие предупреждающие знаки уберегут от катастрофы.</p>
+            <p class="blog-meta" style="margin-top:12px;">Декабрь 2024 &nbsp;·&nbsp; 9 мин. чтения</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80" alt="Ремонт кухни">
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Ремонт</span>
+            <h3>Ремонт кухни в Таиланде — цены, материалы и что вас ждёт</h3>
+            <p>Всё что нужно знать перед ремонтом кухни в тайской недвижимости.</p>
+            <p class="blog-meta" style="margin-top:12px;">Ноябрь 2024 &nbsp;·&nbsp; 5 мин. чтения</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
-  <section class="how-bg">
-    <div class="container">
-      <div class="text-center">
-        <span class="section-label">Process</span>
-        <h2>How we work</h2>
-      </div>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">01</div>
-          <h3>Free consultation</h3>
-          <p>Tell us your idea. We assess the scope and give you an honest estimate — no obligations.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">02</div>
-          <h3>Fixed-price contract</h3>
-          <p>We agree on scope, price, and timeline. Everything in writing before work starts.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">03</div>
-          <h3>We build, you watch</h3>
-          <p>Weekly photo and video updates. You can be anywhere in the world.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">04</div>
-          <h3>Handover & warranty</h3>
-          <p>Keys in your hand, 2-year warranty included. We're still here after delivery.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
   <div class="container">
     <div class="cta-banner">
-      <h2>Have a project in mind?</h2>
-      <p>Drop us a message — we'll get back within 24 hours with a free initial consultation.</p>
-      <div class="flex-gap" style="justify-content: center;">
-        <a href="contact.html" class="btn btn-primary">Send us details →</a>
-        <a href="https://wa.me/66000000000" class="btn btn-outline" target="_blank">WhatsApp us</a>
+      <h2>Есть вопрос по вашему проекту?</h2>
+      <p>Рады ответить — без обязательств. Просто напишите нам.</p>
+      <div class="flex-gap" style="justify-content:center;">
+        <a href="contact.html" class="btn btn-primary">Задать вопрос →</a>
+        <a href="https://wa.me/66000000000" class="btn btn-outline" target="_blank">WhatsApp</a>
       </div>
-      <p class="cta-note">Говорим по-русски &nbsp;·&nbsp; siambuildpro.com</p>
+      <p class="cta-note">Говорим по-русски &nbsp;·&nbsp; Отвечаем в течение 24 часов</p>
     </div>
   </div>
 
@@ -198,32 +171,32 @@
     <div class="footer-inner">
       <div>
         <div class="footer-logo">Siam<span>Build</span> Pro</div>
-        <p class="footer-about">Construction and renovation in Phuket, Thailand. European engineering standards, fixed-price contracts.</p>
+        <p class="footer-about">Строительство и ремонт на Пхукете, Таиланд. Европейские стандарты качества, фиксированная цена.</p>
         <p style="font-size:13px; color:rgba(255,255,255,0.4); margin-top:12px;">Говорим по-русски</p>
       </div>
       <div class="footer-col">
-        <h4>Pages</h4>
+        <h4>Страницы</h4>
         <ul>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="about.html">About us</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="services.html">Услуги</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="blog.html">Блог</a></li>
+          <li><a href="contact.html">Контакты</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact</h4>
+        <h4>Контакты</h4>
         <ul>
           <li><a href="https://wa.me/66000000000">WhatsApp</a></li>
           <li><a href="mailto:hello@siambuildpro.com">hello@siambuildpro.com</a></li>
           <li><a href="#">Instagram</a></li>
-          <li><span style="color:rgba(255,255,255,0.4);">Phuket, Thailand</span></li>
+          <li><span style="color:rgba(255,255,255,0.4);">Пхукет, Таиланд</span></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 SiamBuild Pro. All rights reserved.</span>
-      <span>Built right. Built to last.</span>
+      <span>© 2025 SiamBuild Pro. Все права защищены.</span>
+      <span>Строим правильно. Строим надолго.</span>
     </div>
   </div>
 </footer>

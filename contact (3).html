@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Портфолио SiamBuild Pro — строительство и ремонт на Пхукете, Таиланд.">
+  <title>Портфолио — SiamBuild Pro</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .filter-bar { display:flex; gap:8px; flex-wrap:wrap; margin-top:32px; }
+    .filter-btn { padding:8px 18px; border-radius:100px; border:1px solid var(--gray-200); background:var(--white); font-family:'DM Sans',sans-serif; font-size:14px; cursor:pointer; transition:all 0.2s; color:var(--gray-600); }
+    .filter-btn:hover,.filter-btn.active { background:var(--black); color:var(--white); border-color:var(--black); }
+    .portfolio-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:24px; margin-top:40px; }
+    .portfolio-card { border-radius:var(--radius); overflow:hidden; background:var(--white); border:1px solid var(--gray-200); transition:all 0.2s; }
+    .portfolio-card:hover { box-shadow:var(--shadow); transform:translateY(-4px); }
+    .portfolio-img { height:220px; overflow:hidden; background:var(--gray-100); position:relative; }
+    .portfolio-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s ease; }
+    .portfolio-card:hover .portfolio-img img { transform:scale(1.05); }
+    .portfolio-overlay { position:absolute; inset:0; background:rgba(0,0,0,0.4); display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity 0.2s; }
+    .portfolio-card:hover .portfolio-overlay { opacity:1; }
+    .portfolio-overlay span { color:var(--white); font-size:14px; font-weight:500; border:1px solid rgba(255,255,255,0.6); padding:8px 18px; border-radius:100px; }
+    .portfolio-body { padding:20px 24px; }
+    .portfolio-body h3 { font-size:1rem; margin-bottom:6px; }
+    .portfolio-body p { font-size:13px; }
+    .portfolio-meta { display:flex; gap:16px; margin-top:12px; padding-top:12px; border-top:1px solid var(--gray-100); }
+    .meta-item { font-size:12px; color:var(--gray-400); }
+    .meta-item strong { color:var(--gray-800); font-weight:500; display:block; font-size:13px; }
+    .coming-soon { text-align:center; padding:80px 24px; background:var(--gray-50); border-radius:var(--radius); border:2px dashed var(--gray-200); margin-top:24px; }
+    .coming-soon h3 { margin-bottom:12px; }
+    .coming-soon p { max-width:400px; margin:0 auto 24px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">Siam<span>Build</span> Pro</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="services.html">Услуги</a></li>
+      <li><a href="portfolio.html">Портфолио</a></li>
+      <li><a href="about.html">О нас</a></li>
+      <li><a href="blog.html">Блог</a></li>
+      <li><a href="contact.html" class="nav-cta">Получить расчёт</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:8px;">
+      <div class="lang-switch"><a href="../portfolio.html">EN</a><a href="portfolio.html" class="active">RU</a></div>
+      <button class="nav-toggle" id="navToggle" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label">Наши работы</span>
+      <h1>Портфолио</h1>
+      <p>К каждому проекту — одинаковое внимание к деталям, будь то одна комната или вилла под ключ.</p>
+      <div class="filter-bar">
+        <button class="filter-btn active">Все проекты</button>
+        <button class="filter-btn">Строительство</button>
+        <button class="filter-btn">Ремонт</button>
+        <button class="filter-btn">Бассейны</button>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Вилла 3 спальни Равай">
+            <div class="portfolio-overlay"><span>Смотреть проект</span></div>
+          </div>
+          <div class="portfolio-body">
+            <span class="card-tag">Строительство</span>
+            <h3>Вилла 3 спальни, Равай</h3>
+            <p>Строительство под ключ с бассейном, террасой и ландшафтным садом. Сдано в срок.</p>
+            <div class="portfolio-meta">
+              <div class="meta-item"><strong>180 м²</strong>Площадь</div>
+              <div class="meta-item"><strong>6 месяцев</strong>Срок</div>
+              <div class="meta-item"><strong>Равай</strong>Район</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Ремонт квартиры Патонг">
+            <div class="portfolio-overlay"><span>Смотреть проект</span></div>
+          </div>
+          <div class="portfolio-body">
+            <span class="card-tag">Ремонт</span>
+            <h3>Полный ремонт квартиры, Патонг</h3>
+            <p>Комплексный ремонт квартиры 65 м² — новая планировка, кухня, санузлы и отделка.</p>
+            <div class="portfolio-meta">
+              <div class="meta-item"><strong>65 м²</strong>Площадь</div>
+              <div class="meta-item"><strong>10 недель</strong>Срок</div>
+              <div class="meta-item"><strong>Патонг</strong>Район</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=800&q=80" alt="Бассейн инфинити Чалонг">
+            <div class="portfolio-overlay"><span>Смотреть проект</span></div>
+          </div>
+          <div class="portfolio-body">
+            <span class="card-tag">Бассейны</span>
+            <h3>Бассейн инфинити и терраса, Чалонг</h3>
+            <p>Бассейн инфинити 12 м с солнечной террасой, летней кухней и тропическим садом.</p>
+            <div class="portfolio-meta">
+              <div class="meta-item"><strong>12 м</strong>Длина</div>
+              <div class="meta-item"><strong>8 недель</strong>Срок</div>
+              <div class="meta-item"><strong>Чалонг</strong>Район</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="coming-soon">
+        <h3>Новые проекты скоро появятся</h3>
+        <p>Сейчас мы работаем над новыми объектами на Пхукете. Следите за обновлениями в Instagram — там публикуем ход работ в реальном времени.</p>
+        <div class="flex-gap" style="justify-content:center;">
+          <a href="https://instagram.com/siambuildpro" class="btn btn-outline btn-sm" target="_blank">Instagram @siambuildpro →</a>
+          <a href="contact.html" class="btn btn-primary btn-sm">Начать свой проект →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Ваш проект может быть следующим</h2>
+      <p>Расскажите о своих планах — дадим честную оценку и бесплатный расчёт.</p>
+      <div class="flex-gap" style="justify-content:center;">
+        <a href="contact.html" class="btn btn-primary">Получить расчёт →</a>
+        <a href="https://wa.me/66000000000" class="btn btn-outline" target="_blank">WhatsApp</a>
+      </div>
+      <p class="cta-note">Говорим по-русски &nbsp;·&nbsp; Отвечаем в течение 24 часов</p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">Siam<span>Build</span> Pro</div>
+        <p class="footer-about">Строительство и ремонт на Пхукете, Таиланд. Европейские стандарты качества, фиксированная цена.</p>
+        <p style="font-size:13px; color:rgba(255,255,255,0.4); margin-top:12px;">Говорим по-русски</p>
+      </div>
+      <div class="footer-col">
+        <h4>Страницы</h4>
+        <ul>
+          <li><a href="services.html">Услуги</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="blog.html">Блог</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="https://wa.me/66000000000">WhatsApp</a></li>
+          <li><a href="mailto:hello@siambuildpro.com">hello@siambuildpro.com</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><span style="color:rgba(255,255,255,0.4);">Пхукет, Таиланд</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 SiamBuild Pro. Все права защищены.</span>
+      <span>Строим правильно. Строим надолго.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>

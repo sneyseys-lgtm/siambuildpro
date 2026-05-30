@@ -1,244 +1,636 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SiamBuild Pro blog — construction tips, costs, and insights for building in Phuket, Thailand.">
-  <title>Blog — SiamBuild Pro</title>
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    .blog-featured {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      gap: 32px;
-      margin-top: 48px;
-    }
-    .blog-featured-card {
-      border-radius: var(--radius);
-      overflow: hidden;
-      border: 1px solid var(--gray-200);
-      transition: all 0.2s;
-      cursor: pointer;
-    }
-    .blog-featured-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
-    .blog-featured-img {
-      height: 280px;
-      overflow: hidden;
-      background: var(--gray-100);
-    }
-    .blog-featured-img img { width:100%; height:100%; object-fit:cover; transition: transform 0.5s; }
-    .blog-featured-card:hover .blog-featured-img img { transform: scale(1.04); }
-    .blog-featured-body { padding: 28px 32px; }
-    .blog-featured-body h2 { font-size: 1.4rem; margin-bottom: 10px; }
-    .blog-featured-body p { font-size: 15px; }
-    .blog-meta { font-size: 12px; color: var(--gray-400); margin-top: 16px; }
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display&display=swap');
 
-    .blog-side { display: flex; flex-direction: column; gap: 16px; }
-    .blog-side-card {
-      display: flex;
-      gap: 16px;
-      padding: 16px;
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius-sm);
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .blog-side-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
-    .blog-side-img {
-      width: 80px;
-      height: 80px;
-      border-radius: var(--radius-sm);
-      overflow: hidden;
-      flex-shrink: 0;
-      background: var(--gray-100);
-    }
-    .blog-side-img img { width:100%; height:100%; object-fit:cover; }
-    .blog-side-card h3 { font-size: 14px; font-family: 'DM Sans', sans-serif; font-weight: 500; margin-bottom: 4px; line-height: 1.4; }
-    .blog-side-card p { font-size: 12px; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    @media (max-width: 900px) {
-      .blog-featured { grid-template-columns: 1fr; }
-    }
-  </style>
-</head>
-<body>
+:root {
+  --white: #ffffff;
+  --black: #111110;
+  --gray-50: #f9f8f6;
+  --gray-100: #f0ede8;
+  --gray-200: #e2ddd6;
+  --gray-400: #a8a39b;
+  --gray-600: #6b6760;
+  --gray-800: #3a3835;
+  --accent: #1d6b4f;
+  --accent-light: #e8f4ef;
+  --accent-dark: #134d38;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.2s ease;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+}
 
-<nav>
-  <div class="container nav-inner">
-    <a href="index.html" class="nav-logo">Siam<span>Build</span> Pro</a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="services.html">Services</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="contact.html" class="nav-cta">Get a quote</a></li>
-    </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
+html { scroll-behavior: smooth; }
 
-<main>
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--black);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
 
-  <div class="page-hero">
-    <div class="container">
-      <span class="section-label">Insights</span>
-      <h1>Blog</h1>
-      <p>Honest advice about building and renovating in Thailand — costs, timelines, materials, and what nobody else tells you.</p>
-    </div>
-  </div>
+h1, h2, h3, h4 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--black);
+}
 
-  <section>
-    <div class="container">
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); }
+h3 { font-size: 1.25rem; font-family: 'DM Sans', sans-serif; font-weight: 500; }
 
-      <div class="blog-featured">
-        <div class="blog-featured-card">
-          <div class="blog-featured-img">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="How much does it cost to build a house in Phuket">
-          </div>
-          <div class="blog-featured-body">
-            <span class="card-tag">Costs & budgeting</span>
-            <h2>How much does it cost to build a house in Phuket in 2025?</h2>
-            <p>A realistic breakdown of construction costs in Phuket — land, materials, labour, permits, and the hidden extras nobody mentions upfront.</p>
-            <p class="blog-meta">May 2025 &nbsp;·&nbsp; 8 min read</p>
-          </div>
-        </div>
+p { color: var(--gray-600); }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
 
-        <div class="blog-side">
-          <div class="blog-side-card">
-            <div class="blog-side-img">
-              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=200&q=80" alt="5 mistakes">
-            </div>
-            <div>
-              <span class="card-tag" style="font-size:10px; padding:2px 8px;">Mistakes to avoid</span>
-              <h3>5 costly mistakes foreigners make when renovating in Thailand</h3>
-              <p class="blog-meta">April 2025 &nbsp;·&nbsp; 6 min read</p>
-            </div>
-          </div>
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
 
-          <div class="blog-side-card">
-            <div class="blog-side-img">
-              <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=200&q=80" alt="Materials guide">
-            </div>
-            <div>
-              <span class="card-tag" style="font-size:10px; padding:2px 8px;">Materials</span>
-              <h3>What materials work best in Thailand's climate — and what to avoid</h3>
-              <p class="blog-meta">March 2025 &nbsp;·&nbsp; 5 min read</p>
-            </div>
-          </div>
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--gray-200);
+}
 
-          <div class="blog-side-card">
-            <div class="blog-side-img">
-              <img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=200&q=80" alt="Pool guide">
-            </div>
-            <div>
-              <span class="card-tag" style="font-size:10px; padding:2px 8px;">Pools</span>
-              <h3>How long does it take to build a pool in Phuket? A realistic guide</h3>
-              <p class="blog-meta">February 2025 &nbsp;·&nbsp; 4 min read</p>
-            </div>
-          </div>
-        </div>
-      </div>
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
 
-      <hr class="divider">
+.nav-logo {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.25rem;
+  color: var(--black);
+  letter-spacing: -0.01em;
+}
 
-      <span class="section-label">All articles</span>
-      <div class="blog-grid">
-        <div class="card">
-          <div class="card-img">
-            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Permits in Thailand">
-          </div>
-          <div class="card-body">
-            <span class="card-tag">Legal & permits</span>
-            <h3>Building permits in Thailand — what you actually need and how to get them</h3>
-            <p>A practical guide to navigating Thai building regulations as a foreigner.</p>
-            <p class="blog-meta" style="margin-top:12px;">January 2025 &nbsp;·&nbsp; 7 min read</p>
-          </div>
-        </div>
+.nav-logo span { color: var(--accent); }
 
-        <div class="card">
-          <div class="card-img">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Finding contractor Thailand">
-          </div>
-          <div class="card-body">
-            <span class="card-tag">Hiring</span>
-            <h3>How to find a trustworthy contractor in Phuket — and the red flags to watch for</h3>
-            <p>The questions to ask, the contracts to insist on, and the warning signs that save you from disaster.</p>
-            <p class="blog-meta" style="margin-top:12px;">December 2024 &nbsp;·&nbsp; 9 min read</p>
-          </div>
-        </div>
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
 
-        <div class="card">
-          <div class="card-img">
-            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80" alt="Kitchen renovation Thailand">
-          </div>
-          <div class="card-body">
-            <span class="card-tag">Renovation</span>
-            <h3>Kitchen renovation in Thailand — costs, materials, and what to expect</h3>
-            <p>Everything you need to know before renovating your kitchen in a Thai property.</p>
-            <p class="blog-meta" style="margin-top:12px;">November 2024 &nbsp;·&nbsp; 5 min read</p>
-          </div>
-        </div>
-      </div>
+.nav-links a {
+  font-size: 14px;
+  color: var(--gray-600);
+  transition: color var(--transition);
+}
 
-    </div>
-  </section>
+.nav-links a:hover { color: var(--black); }
 
-  <div class="container">
-    <div class="cta-banner">
-      <h2>Have a question about your project?</h2>
-      <p>We're happy to answer — no strings attached. Just reach out.</p>
-      <div class="flex-gap" style="justify-content:center;">
-        <a href="contact.html" class="btn btn-primary">Ask us anything →</a>
-        <a href="https://wa.me/66000000000" class="btn btn-outline" target="_blank">WhatsApp us</a>
-      </div>
-      <p class="cta-note">Говорим по-русски &nbsp;·&nbsp; Reply within 24h</p>
-    </div>
-  </div>
+.nav-cta {
+  background: var(--black);
+  color: var(--white) !important;
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background var(--transition), transform var(--transition);
+}
 
-</main>
+.nav-cta:hover { background: var(--accent) !important; transform: translateY(-1px); }
 
-<footer>
-  <div class="container">
-    <div class="footer-inner">
-      <div>
-        <div class="footer-logo">Siam<span>Build</span> Pro</div>
-        <p class="footer-about">Construction and renovation in Phuket, Thailand. European engineering standards, fixed-price contracts.</p>
-        <p style="font-size:13px; color:rgba(255,255,255,0.4); margin-top:12px;">Говорим по-русски</p>
-      </div>
-      <div class="footer-col">
-        <h4>Pages</h4>
-        <ul>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="about.html">About us</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="https://wa.me/66000000000">WhatsApp</a></li>
-          <li><a href="mailto:hello@siambuildpro.com">hello@siambuildpro.com</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><span style="color:rgba(255,255,255,0.4);">Phuket, Thailand</span></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2025 SiamBuild Pro. All rights reserved.</span>
-      <span>Built right. Built to last.</span>
-    </div>
-  </div>
-</footer>
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+}
 
-<script>
-  const toggle = document.getElementById('navToggle');
-  const links = document.getElementById('navLinks');
-  toggle.addEventListener('click', () => links.classList.toggle('open'));
-</script>
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--black);
+  transition: var(--transition);
+}
 
-</body>
-</html>
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid var(--gray-200);
+  border-radius: 100px;
+  padding: 4px 6px;
+  margin-left: 8px;
+}
+
+.lang-switch a {
+  padding: 3px 8px;
+  border-radius: 100px;
+  color: var(--gray-400);
+  transition: all var(--transition);
+  font-size: 12px;
+}
+
+.lang-switch a.active {
+  background: var(--black);
+  color: var(--white);
+}
+
+.lang-switch a:hover:not(.active) { color: var(--black); }
+
+/* BUTTONS */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 100px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+  border: none;
+}
+
+.btn-primary {
+  background: var(--black);
+  color: var(--white);
+}
+
+.btn-primary:hover { background: var(--accent); transform: translateY(-2px); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--black);
+  border: 1px solid var(--gray-200);
+}
+
+.btn-outline:hover { border-color: var(--black); transform: translateY(-2px); }
+
+.btn-sm { padding: 10px 20px; font-size: 14px; }
+
+/* SECTIONS */
+section { padding: 80px 0; }
+.section-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+/* HERO */
+.hero {
+  padding: 80px 0 60px;
+  overflow: hidden;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-title { margin-bottom: 20px; }
+.hero-sub { font-size: 17px; margin-bottom: 32px; max-width: 420px; }
+
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.hero-trust {
+  display: flex;
+  gap: 24px;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-200);
+  flex-wrap: wrap;
+}
+
+.trust-item { display: flex; flex-direction: column; }
+.trust-num { font-size: 1.5rem; font-weight: 500; color: var(--black); font-family: 'DM Serif Display', serif; }
+.trust-label { font-size: 13px; color: var(--gray-400); }
+
+.hero-photos {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: 200px 200px;
+  gap: 12px;
+}
+
+.hero-photo-main {
+  grid-row: 1 / 3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--gray-100);
+}
+
+.hero-photo-main img,
+.hero-photo-sm img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.hero-photo-main:hover img,
+.hero-photo-sm:hover img { transform: scale(1.03); }
+
+.hero-photo-sm {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--gray-100);
+}
+
+/* SERVICES GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.service-card {
+  background: var(--gray-50);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  transition: all var(--transition);
+  border: 1px solid transparent;
+}
+
+.service-card:hover {
+  border-color: var(--gray-200);
+  background: var(--white);
+  box-shadow: var(--shadow);
+  transform: translateY(-4px);
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--accent-light);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.service-card h3 { margin-bottom: 10px; }
+.service-card p { font-size: 14px; }
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent);
+  margin-top: 16px;
+  transition: gap var(--transition);
+}
+.service-link:hover { gap: 8px; }
+
+/* WHY US */
+.why-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.why-photo {
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 480px;
+  background: var(--gray-100);
+}
+
+.why-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+.why-list { display: flex; flex-direction: column; gap: 0; }
+
+.why-item {
+  display: flex;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.why-item:last-child { border-bottom: none; }
+
+.why-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem;
+  color: var(--gray-200);
+  min-width: 32px;
+  line-height: 1;
+  padding-top: 4px;
+}
+
+.why-item h3 { margin-bottom: 6px; font-size: 1rem; }
+.why-item p { font-size: 14px; }
+
+/* HOW IT WORKS */
+.how-bg { background: var(--gray-50); }
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.step-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.5rem;
+  color: var(--gray-200);
+  line-height: 1;
+}
+
+.step h3 { font-size: 1rem; }
+.step p { font-size: 14px; }
+
+/* CTA BANNER */
+.cta-banner {
+  background: var(--black);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 60px;
+  text-align: center;
+  margin: 80px 0;
+}
+
+.cta-banner h2 { color: var(--white); margin-bottom: 12px; }
+.cta-banner p { color: rgba(255,255,255,0.6); margin-bottom: 32px; }
+.cta-banner .btn-primary { background: var(--white); color: var(--black); }
+.cta-banner .btn-primary:hover { background: var(--accent-light); }
+.cta-banner .btn-outline { border-color: rgba(255,255,255,0.3); color: var(--white); }
+.cta-banner .btn-outline:hover { border-color: var(--white); }
+
+.cta-note {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  margin-top: 20px;
+}
+
+/* PAGE HERO (inner pages) */
+.page-hero {
+  padding: 60px 0 48px;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.page-hero h1 { margin-bottom: 12px; }
+.page-hero p { font-size: 18px; max-width: 560px; }
+
+/* CARDS GRID */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all var(--transition);
+}
+
+.card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+
+.card-img {
+  height: 200px;
+  background: var(--gray-100);
+  overflow: hidden;
+}
+
+.card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.card:hover .card-img img { transform: scale(1.04); }
+
+.card-body { padding: 24px; }
+.card-body h3 { margin-bottom: 8px; }
+.card-body p { font-size: 14px; }
+.card-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-light);
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+/* CONTACT FORM */
+.contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.contact-info { display: flex; flex-direction: column; gap: 32px; }
+
+.contact-detail {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--accent-light);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.contact-detail h4 { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 15px; margin-bottom: 2px; }
+.contact-detail p { font-size: 14px; }
+.contact-detail a { color: var(--accent); }
+
+.form { display: flex; flex-direction: column; gap: 16px; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+
+.form-group label { font-size: 13px; font-weight: 500; color: var(--gray-800); }
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 16px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: var(--black);
+  background: var(--white);
+  transition: border-color var(--transition);
+  outline: none;
+  width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(--accent); }
+
+.form-group textarea { resize: vertical; min-height: 120px; }
+
+/* FOOTER */
+footer {
+  background: var(--black);
+  color: var(--white);
+  padding: 60px 0 32px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.footer-logo {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.footer-logo span { color: var(--accent); }
+.footer-about { font-size: 14px; color: rgba(255,255,255,0.5); max-width: 260px; }
+
+.footer-col h4 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 16px;
+}
+
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-col a { font-size: 14px; color: rgba(255,255,255,0.6); transition: color var(--transition); }
+.footer-col a:hover { color: var(--white); }
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 13px;
+  color: rgba(255,255,255,0.3);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ABOUT PAGE */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.team-card { text-align: center; }
+
+.team-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--gray-100);
+  margin: 0 auto 16px;
+  overflow: hidden;
+}
+
+.team-photo img { width: 100%; height: 100%; object-fit: cover; }
+.team-card h3 { font-size: 1rem; margin-bottom: 4px; }
+.team-card p { font-size: 14px; }
+
+/* BLOG */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+
+/* UTILITIES */
+.text-center { text-align: center; }
+.mt-8 { margin-top: 8px; }
+.mt-16 { margin-top: 16px; }
+.mt-24 { margin-top: 24px; }
+.mt-48 { margin-top: 48px; }
+.mb-8 { margin-bottom: 8px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-48 { margin-bottom: 48px; }
+.flex-gap { display: flex; gap: 12px; flex-wrap: wrap; }
+.divider { border: none; border-top: 1px solid var(--gray-100); margin: 48px 0; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-photos { display: none; }
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .why-inner { grid-template-columns: 1fr; }
+  .why-photo { height: 300px; }
+  .steps { grid-template-columns: 1fr 1fr; }
+  .contact-inner { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .cta-banner { padding: 40px 24px; }
+}
+
+@media (max-width: 600px) {
+  section { padding: 60px 0; }
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 64px; left: 0; right: 0;
+    background: var(--white);
+    padding: 24px;
+    gap: 20px;
+    border-bottom: 1px solid var(--gray-200);
+    box-shadow: var(--shadow);
+  }
+  .services-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+  h1 { font-size: 2rem; }
+}
