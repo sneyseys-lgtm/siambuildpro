@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="О нас — SiamBuild Pro, строительство и ремонт на Пхукете, Таиланд.">
+  <title>О нас — SiamBuild Pro</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .values-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:24px; margin-top:48px; }
+    .value-card { padding:32px 28px; background:var(--gray-50); border-radius:var(--radius); }
+    .value-icon { font-size:28px; margin-bottom:16px; }
+    .value-card h3 { margin-bottom:8px; font-size:1rem; }
+    .value-card p { font-size:14px; }
+    .story-inner { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+    .story-photo { border-radius:var(--radius); overflow:hidden; height:440px; background:var(--gray-100); }
+    .story-photo img { width:100%; height:100%; object-fit:cover; }
+    .story-text p { margin-bottom:16px; }
+    @media (max-width:900px) { .story-inner { grid-template-columns:1fr; } .story-photo { height:280px; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">Siam<span>Build</span> Pro</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="services.html">Услуги</a></li>
+      <li><a href="portfolio.html">Портфолио</a></li>
+      <li><a href="about.html">О нас</a></li>
+      <li><a href="blog.html">Блог</a></li>
+      <li><a href="contact.html" class="nav-cta">Получить расчёт</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:8px;">
+      <div class="lang-switch"><a href="../about.html">EN</a><a href="about.html" class="active">RU</a></div>
+      <button class="nav-toggle" id="navToggle" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label">Кто мы</span>
+      <h1>О SiamBuild Pro</h1>
+      <p>Небольшая команда с высокими стандартами — привносим европейскую инженерную дисциплину в строительство на Пхукете.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="story-inner">
+        <div class="story-photo">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Команда на объекте">
+        </div>
+        <div class="story-text">
+          <span class="section-label">Наша история</span>
+          <h2 style="margin-bottom:24px;">Построено на доверии, сдано с точностью</h2>
+          <p>SiamBuild Pro основан сертифицированным инженером с более чем 5-летним опытом в строительстве и управлении проектами. Поработав на крупных объектах, мы увидели пробел на рынке Пхукета: клиенты хотят качества, которому можно доверять, прозрачного ценообразования и подрядчика, который говорит на их языке.</p>
+          <p>Мы сочетаем глубокое знание местного рынка с инженерной дисциплиной, которой большинство местных подрядчиков просто не могут предложить. Каждый объект лично курирует наш ведущий инженер — мы не передаём вас субподрядчику и не исчезаем.</p>
+          <p>Строите ли вы виллу мечты или ремонтируете квартиру как инвестиционный объект — мы относимся к вашему проекту с той же серьёзностью, с которой хотели бы, чтобы строили наш собственный дом.</p>
+          <p style="color:var(--accent); font-weight:500;">Говорим по-русски — ведём все переговоры на вашем языке, от первого звонка до сдачи объекта.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-bg">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Что нами движет</span>
+        <h2>Наши ценности</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">🎯</div>
+          <h3>Честность прежде всего</h3>
+          <p>Говорим что возможно, что стоит и сколько займёт — до начала работ, а не после.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">⚙️</div>
+          <h3>Инженерный подход</h3>
+          <p>Каждое решение основано на технических расчётах. Мы не срезаем углы, потому что понимаем почему это важно.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">📱</div>
+          <h3>Полная прозрачность</h3>
+          <p>Еженедельные фото и видео отчёты. Вы всегда точно знаете на каком этапе ваш проект.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🤝</div>
+          <h3>Долгосрочные отношения</h3>
+          <p>Мы здесь не ради одного заказа. Хотим быть командой, которую вы вызываете на каждый проект и рекомендуете всем знакомым.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <span class="section-label">Команда</span>
+      <h2>С кем вы будете работать</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="Ведущий инженер">
+          </div>
+          <h3>Алексей</h3>
+          <p style="color:var(--accent); font-size:13px; font-weight:500; margin-bottom:6px;">Ведущий инженер и сооснователь</p>
+          <p>Сертифицированный инженер-конструктор, 5+ лет в управлении строительными проектами. Курирует проектирование, технический контроль и общение с клиентами.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80" alt="Прораб">
+          </div>
+          <h3>Михаил</h3>
+          <p style="color:var(--accent); font-size:13px; font-weight:500; margin-bottom:6px;">Прораб и сооснователь</p>
+          <p>Постоянно на Пхукете. Координирует бригаду, управляет ежедневными операциями и следит за тем, чтобы каждый объект соответствовал нашим стандартам.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Хотите работать с нами?</h2>
+      <p>Напишите — расскажите о проекте и посмотрим, подходим ли мы друг другу.</p>
+      <div class="flex-gap" style="justify-content:center;">
+        <a href="contact.html" class="btn btn-primary">Связаться →</a>
+        <a href="https://wa.me/66000000000" class="btn btn-outline" target="_blank">WhatsApp</a>
+      </div>
+      <p class="cta-note">Говорим по-русски &nbsp;·&nbsp; Отвечаем в течение 24 часов</p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">Siam<span>Build</span> Pro</div>
+        <p class="footer-about">Строительство и ремонт на Пхукете, Таиланд. Европейские стандарты качества, фиксированная цена.</p>
+        <p style="font-size:13px; color:rgba(255,255,255,0.4); margin-top:12px;">Говорим по-русски</p>
+      </div>
+      <div class="footer-col">
+        <h4>Страницы</h4>
+        <ul>
+          <li><a href="services.html">Услуги</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="blog.html">Блог</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="https://wa.me/66000000000">WhatsApp</a></li>
+          <li><a href="mailto:hello@siambuildpro.com">hello@siambuildpro.com</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><span style="color:rgba(255,255,255,0.4);">Пхукет, Таиланд</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 SiamBuild Pro. Все права защищены.</span>
+      <span>Строим правильно. Строим надолго.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
+
+</body>
+</html>

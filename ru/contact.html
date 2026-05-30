@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контакты SiamBuild Pro — получите бесплатный расчёт на строительство или ремонт на Пхукете.">
+  <title>Контакты — SiamBuild Pro</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .success-msg { display:none; background:var(--accent-light); border:1px solid var(--accent); border-radius:var(--radius-sm); padding:16px 20px; color:var(--accent-dark); font-size:15px; margin-top:16px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">Siam<span>Build</span> Pro</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="services.html">Услуги</a></li>
+      <li><a href="portfolio.html">Портфолио</a></li>
+      <li><a href="about.html">О нас</a></li>
+      <li><a href="blog.html">Блог</a></li>
+      <li><a href="contact.html" class="nav-cta">Получить расчёт</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:8px;">
+      <div class="lang-switch"><a href="../contact.html">EN</a><a href="contact.html" class="active">RU</a></div>
+      <button class="nav-toggle" id="navToggle" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label">Связаться с нами</span>
+      <h1>Давайте обсудим ваш проект</h1>
+      <p>Расскажите что планируете — ответим в течение 24 часов и дадим честный совет и бесплатный расчёт.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="contact-inner">
+
+        <div class="contact-info">
+          <div>
+            <h3 style="margin-bottom:8px;">Предпочитаете написать напрямую?</h3>
+            <p style="font-size:14px;">WhatsApp — самый быстрый способ связаться с нами. Обычно отвечаем в течение нескольких часов.</p>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-icon">📱</div>
+            <div>
+              <h4>WhatsApp</h4>
+              <p><a href="https://wa.me/66000000000" target="_blank">+66 00 000 0000</a></p>
+              <p style="font-size:12px; margin-top:2px;">Самый быстрый ответ</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:hello@siambuildpro.com">hello@siambuildpro.com</a></p>
+              <p style="font-size:12px; margin-top:2px;">Ответ в течение 24 часов</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-icon">📸</div>
+            <div>
+              <h4>Instagram</h4>
+              <p><a href="https://instagram.com/siambuildpro" target="_blank">@siambuildpro</a></p>
+              <p style="font-size:12px; margin-top:2px;">Следите за нашими проектами</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Местонахождение</h4>
+              <p>Пхукет, Таиланд</p>
+              <p style="font-size:12px; margin-top:2px;">Работаем по всему острову</p>
+            </div>
+          </div>
+
+          <div style="padding:20px 24px; background:var(--accent-light); border-radius:var(--radius); border:1px solid var(--accent);">
+            <p style="font-size:14px; font-weight:500; color:var(--accent-dark); margin-bottom:4px;">Говорим по-русски 🇷🇺</p>
+            <p style="font-size:13px; color:var(--accent-dark);">Ведём все переговоры на русском языке — от первого звонка до сдачи объекта. Никаких языковых барьеров.</p>
+          </div>
+        </div>
+
+        <div>
+          <h3 style="margin-bottom:24px;">Опишите ваш проект</h3>
+          <form class="form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Ваше имя *</label>
+                <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="ivan@email.com" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="whatsapp">Номер WhatsApp</label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="+7 000 000 0000">
+            </div>
+
+            <div class="form-group">
+              <label for="service">Тип проекта *</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Выберите услугу</option>
+                <option value="new-construction">Строительство под ключ (вилла / дом)</option>
+                <option value="renovation">Ремонт и реновация</option>
+                <option value="pool">Бассейн и благоустройство</option>
+                <option value="commercial">Коммерческое помещение</option>
+                <option value="other">Другое / пока не определился</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="budget">Примерный бюджет</label>
+              <select id="budget" name="budget">
+                <option value="" disabled selected>Выберите диапазон</option>
+                <option value="under-10k">До $10 000</option>
+                <option value="10-30k">$10 000 – $30 000</option>
+                <option value="30-80k">$30 000 – $80 000</option>
+                <option value="80-150k">$80 000 – $150 000</option>
+                <option value="over-150k">Более $150 000</option>
+                <option value="unknown">Пока не знаю</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Расскажите о проекте *</label>
+              <textarea id="message" name="message" placeholder="Опишите проект — район, площадь, сроки, особые пожелания..." required></textarea>
+            </div>
+
+            <input type="hidden" name="language" value="russian">
+
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+              Отправить заявку →
+            </button>
+
+            <p style="font-size:12px; color:var(--gray-400); text-align:center; margin-top:8px;">Ответим в течение 24 часов</p>
+          </form>
+
+          <div class="success-msg" id="successMsg">
+            ✅ Заявка отправлена! Свяжемся с вами в течение 24 часов.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">Siam<span>Build</span> Pro</div>
+        <p class="footer-about">Строительство и ремонт на Пхукете, Таиланд. Европейские стандарты качества, фиксированная цена.</p>
+        <p style="font-size:13px; color:rgba(255,255,255,0.4); margin-top:12px;">Говорим по-русски</p>
+      </div>
+      <div class="footer-col">
+        <h4>Страницы</h4>
+        <ul>
+          <li><a href="services.html">Услуги</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="blog.html">Блог</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="https://wa.me/66000000000">WhatsApp</a></li>
+          <li><a href="mailto:hello@siambuildpro.com">hello@siambuildpro.com</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><span style="color:rgba(255,255,255,0.4);">Пхукет, Таиланд</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 SiamBuild Pro. Все права защищены.</span>
+      <span>Строим правильно. Строим надолго.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('successMsg').style.display = 'block';
+    this.reset();
+    this.scrollIntoView({ behavior:'smooth', block:'end' });
+  });
+</script>
+
+</body>
+</html>
