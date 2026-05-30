@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SiamBuild Pro — строительство и ремонт на Пхукете, Таиланд. Европейские стандарты качества, фиксированная цена, дома и коммерческие помещения под ключ.">
+  <title>SiamBuild Pro — Строительство и ремонт на Пхукете</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">Siam<span>Build</span> Pro</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="services.html">Услуги</a></li>
+      <li><a href="portfolio.html">Портфолио</a></li>
+      <li><a href="about.html">О нас</a></li>
+      <li><a href="blog.html">Блог</a></li>
+      <li><a href="contact.html" class="nav-cta">Получить расчёт</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:8px;">
+      <div class="lang-switch"><a href="../index.html">EN</a><a href="index.html" class="active">RU</a></div>
+      <button class="nav-toggle" id="navToggle" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div>
+          <span class="section-label">Пхукет, Таиланд</span>
+          <h1 class="hero-title">Постройте дом мечты в Таиланде</h1>
+          <p class="hero-sub">Строительство и ремонт частных вилл и коммерческих помещений — от фундамента до отделки. Европейские стандарты качества, местная экспертиза.</p>
+          <div class="hero-btns">
+            <a href="contact.html" class="btn btn-primary">Получить расчёт →</a>
+            <a href="portfolio.html" class="btn btn-outline">Наши работы</a>
+          </div>
+          <div class="hero-trust">
+            <div class="trust-item">
+              <span class="trust-num">5+</span>
+              <span class="trust-label">Лет опыта</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-num">Фикс.</span>
+              <span class="trust-label">Цена гарантирована</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-num">2 года</span>
+              <span class="trust-label">Гарантия</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-num">RU / EN</span>
+              <span class="trust-label">Говорим по-русски</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-photos">
+          <div class="hero-photo-main">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Тропическая вилла с бассейном на Пхукете">
+          </div>
+          <div class="hero-photo-sm">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&q=80" alt="Современный дом снаружи">
+          </div>
+          <div class="hero-photo-sm">
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Отделка интерьера">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section>
+    <div class="container">
+      <span class="section-label">Что мы делаем</span>
+      <h2>Любые виды работ — с одинаковым качеством</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🏗️</div>
+          <h3>Строительство под ключ</h3>
+          <p>Виллы, дома и небольшие коммерческие объекты — полностью под ключ от проекта до сдачи.</p>
+          <a href="services.html" class="service-link">Подробнее →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔨</div>
+          <h3>Ремонт и реновация</h3>
+          <p>Полный или частичный ремонт домов, квартир и коммерческих помещений любой сложности.</p>
+          <a href="services.html" class="service-link">Подробнее →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏊</div>
+          <h3>Бассейны и территория</h3>
+          <p>Бассейны, террасы, сады и зоны отдыха — созданные для тропического климата.</p>
+          <a href="services.html" class="service-link">Подробнее →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section>
+    <div class="container">
+      <div class="why-inner">
+        <div class="why-photo">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Качественное строительство">
+        </div>
+        <div>
+          <span class="section-label">Почему SiamBuild Pro</span>
+          <h2 style="margin-bottom: 32px;">Европейские стандарты в Таиланде</h2>
+          <div class="why-list">
+            <div class="why-item">
+              <div class="why-num">01</div>
+              <div>
+                <h3>Инженерный контроль</h3>
+                <p>Каждый объект ведёт сертифицированный инженер — реальная техническая экспертиза, а не просто прораб.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-num">02</div>
+              <div>
+                <h3>Фиксированная цена</h3>
+                <p>Договорились о цене — она не меняется. Никаких сюрпризов и скрытых доплат.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-num">03</div>
+              <div>
+                <h3>Стройте удалённо</h3>
+                <p>Еженедельные фото и видео отчёты прямо на телефон. Вы всегда в курсе, где бы ни находились.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-num">04</div>
+              <div>
+                <h3>Говорим по-русски</h3>
+                <p>Русский и английский — никаких недопониманий и посредников. Всё напрямую.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-bg">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Процесс работы</span>
+        <h2>Как мы работаем</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>Бесплатная консультация</h3>
+          <p>Расскажите о вашей идее. Оценим объём и дадим честный расчёт — без обязательств.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>Договор с фикс. ценой</h3>
+          <p>Согласовываем объём, цену и сроки. Всё письменно — до начала работ.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>Мы строим, вы наблюдаете</h3>
+          <p>Еженедельные отчёты. Вы можете находиться в любой точке мира.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h3>Сдача и гарантия</h3>
+          <p>Ключи в руках, гарантия 2 года. Мы не исчезаем после завершения работ.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Есть идея для проекта?</h2>
+      <p>Напишите нам — ответим в течение 24 часов и дадим бесплатную консультацию.</p>
+      <div class="flex-gap" style="justify-content: center;">
+        <a href="contact.html" class="btn btn-primary">Описать проект →</a>
+        <a href="https://wa.me/66000000000" class="btn btn-outline" target="_blank">Написать в WhatsApp</a>
+      </div>
+      <p class="cta-note">Говорим по-русски &nbsp;·&nbsp; siambuildpro.com</p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">Siam<span>Build</span> Pro</div>
+        <p class="footer-about">Строительство и ремонт на Пхукете, Таиланд. Европейские стандарты качества, фиксированная цена.</p>
+        <p style="font-size:13px; color:rgba(255,255,255,0.4); margin-top:12px;">Говорим по-русски</p>
+      </div>
+      <div class="footer-col">
+        <h4>Страницы</h4>
+        <ul>
+          <li><a href="services.html">Услуги</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="blog.html">Блог</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="https://wa.me/66000000000">WhatsApp</a></li>
+          <li><a href="mailto:hello@siambuildpro.com">hello@siambuildpro.com</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><span style="color:rgba(255,255,255,0.4);">Пхукет, Таиланд</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 SiamBuild Pro. Все права защищены.</span>
+      <span>Строим правильно. Строим надолго.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
+
+</body>
+</html>
