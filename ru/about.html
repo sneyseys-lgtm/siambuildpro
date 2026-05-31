@@ -7,6 +7,7 @@
   <meta name="description" content="О нас — SiamBuild Pro, инженерное строительство и ремонт на Пхукете, Таиланд.">
   <title>О нас — SiamBuild Pro</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <style>
     .values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:48px;}
     .value-card{padding:32px 28px;background:var(--gray-50);border-radius:var(--radius);}
@@ -75,7 +76,7 @@
 
 <main>
 
-  <div class="page-hero">
+  <div class="page-hero" data-aos="fade-up">
     <div class="container">
       <span class="section-label">Кто мы</span>
       <h1>Два инженера. Один стандарт.</h1>
@@ -134,22 +135,22 @@
         <h2>Без лишних слов — по делу</h2>
       </div>
       <div class="values-grid">
-        <div class="value-card">
+        <div class="value-card" data-aos="fade-up">
           <div class="value-icon">📋</div>
           <h3>Смета под ваш проект</h3>
           <p>Никакого прайс-листа. Смотрим на конкретный участок, объём, задачи — и считаем реально. С разбивкой по статьям, без округлений в большую сторону.</p>
         </div>
-        <div class="value-card">
+        <div class="value-card" data-aos="fade-up">
           <div class="value-icon">🔍</div>
           <h3>Инженер на каждом решении</h3>
           <p>Выбор материалов, конструктивные решения, системы — всё проходит через человека с техническим образованием и опытом на серьёзных объектах.</p>
         </div>
-        <div class="value-card">
+        <div class="value-card" data-aos="fade-up">
           <div class="value-icon">📱</div>
           <h3>Отчёты каждую неделю</h3>
           <p>Фото и видео с объекта раз в неделю — без исключений. Живёте в другом городе или стране — всё равно видите что происходит.</p>
         </div>
-        <div class="value-card">
+        <div class="value-card" data-aos="fade-up">
           <div class="value-icon">🤝</div>
           <h3>Гарантия 2 года</h3>
           <p>Сдали объект — не исчезаем. Два года гарантии на все работы. Что-то пошло не так — приедем и исправим за свой счёт.</p>
@@ -163,7 +164,7 @@
       <span class="section-label">Команда</span>
       <h2>С кем вы работаете</h2>
       <div class="team-grid">
-        <div class="team-card">
+        <div class="team-card" data-aos="fade-up">
           <div class="team-photo">
             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="Ведущий инженер">
           </div>
@@ -171,7 +172,7 @@
           <p style="color:var(--accent);font-size:13px;font-weight:500;margin-bottom:8px;">Ведущий инженер, сооснователь</p>
           <p>Инженер-строитель. Аэропорты, промышленные объекты, жилые комплексы, частные дома. Занимается проектированием, составлением смет, техническим контролем и общением с заказчиком. Работает между Россией и Таиландом.</p>
         </div>
-        <div class="team-card">
+        <div class="team-card" data-aos="fade-up">
           <div class="team-photo">
             <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80" alt="Прораб">
           </div>
@@ -184,7 +185,7 @@
   </section>
 
   <div class="container">
-    <div class="cta-banner">
+    <div class="cta-banner" data-aos="fade-up">
       <h2>Хотите работать с нами?</h2>
       <p>Расскажите о проекте — дадим честную оценку без накруток и лишних слов.</p>
       <div class="flex-gap" style="justify-content:center;">
@@ -241,5 +242,9 @@
     <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.523 5.845L.057 23.077a.75.75 0 00.866.866l5.232-1.466A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.9 0-3.682-.497-5.228-1.367l-.374-.214-3.876 1.086 1.086-3.876-.214-.374A9.945 9.945 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
   </a>
 <!-- wa-btn-v2 -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 600, once: true, offset: 80 });
+  </script>
 </body>
 </html>
